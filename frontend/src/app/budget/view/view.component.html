@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <h1 class="title">Budgets Table</h1>
+  </div>
+  <div class="row">
+    <table class="table">
+      <tr>
+        <th>Title</th>
+        <th>Budget</th>
+        <th>Color</th>
+        <th>Username</th>
+        <th>Edit/Delete</th>
+      </tr>
+      <tr *ngFor="let n of budget">
+        <td>{{ n.title }}</td>
+        <td>{{ n.budget }}</td>
+        <td>{{n.color}}</td>
+        <td>{{n.username}}</td>
+        <td>
+          <button type="button" class="btn btn-warning" (click)="updateBudget(n)">
+            Edit
+          </button>
+          <button type="button" class="btn btn-danger" (click)="deleteBudget(n)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,89 @@
+<form name="form" #f="ngForm" (ngSubmit)="f.form.valid && registerBudget(budgets)">
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      name="title"
+      #title="ngModel"
+      [(ngModel)]="budgets.title"
+      placeholder="Budget Title"
+      [class.is-invalid]="f.submitted && title.invalid"
+      required
+      minlength="4"
+    />
+    <div *ngIf="f.submitted && title.invalid" class="invalid-feedback">
+      <div *ngIf="title.errors.required">Title is required</div>
+      <div *ngIf="title.errors.minlength">
+        Title must be at least 4 characters
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="budgets">Budget:</label>
+    <input
+      type="number"
+      class="form-control"
+      id="budgets"
+      name="budgets"
+      #budget="ngModel"
+      [(ngModel)]="budgets.budget"
+      placeholder="Enter budgets"
+      [class.is-invalid]="f.submitted && budget.invalid"
+      required
+      minlength="3"
+    />
+    <div *ngIf="f.submitted && budget.invalid" class="invalid-feedback">
+      <div *ngIf="budget.errors.required">Budget is required</div>
+      <div *ngIf="budget.errors.minlength">
+        Budget must be at least 3 characters
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="color">Color Code:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="color"
+      name="color"
+      #color="ngModel"
+      [(ngModel)]="budgets.color"
+      [class.is-invalid]="f.submitted && color.invalid"
+      placeholder="Enter Color Code"
+      required
+      minlength="7"
+    />
+    <div *ngIf="f.submitted && color.invalid" class="invalid-feedback">
+      <div *ngIf="color.errors.required">Color is required</div>
+      <div *ngIf="color.errors.minlength">
+          Color must be at least 7 characters
+        </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="username"
+      name="username"
+      #username="ngModel"
+      value="budgets.username"
+      [(ngModel)]="budgets.username"
+      [class.is-invalid]="f.submitted && username.invalid"
+      placeholder="Enter Username again"
+      required
+      readonly
+    />
+    <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
+      <div *ngIf="username.errors.required">Username is required</div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
