@@ -1,7 +1,10 @@
 {
     "cSpell.words": [
         "Signup",
+        "addbudget",
         "minlength",
+        "noindex",
+        "postbuild",
         "updatebudget",
         "viewbudget"
     ]

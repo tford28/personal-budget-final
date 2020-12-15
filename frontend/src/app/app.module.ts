@@ -14,6 +14,9 @@ import { ViewComponent } from './budget/view/view.component';
 import { UpdateComponent } from './budget/update/update.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BarComponent } from './bar/bar.component';
+import { PieComponent } from './pie/pie.component';
+import { ScatterComponent } from './scatter/scatter.component';
 
 const routes: Routes = [
   {
@@ -31,6 +34,11 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'addbudget',
+    component: RegisterComponent,
     canActivate: [AuthGuard],
   },
   {
@@ -52,10 +60,13 @@ const routes: Routes = [
     SignupComponent,
     HomeComponent,
     RegisterComponent,
-    UpdateComponent,
     ViewComponent,
+    UpdateComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BarComponent,
+    PieComponent,
+    ScatterComponent
   ],
   imports: [
     BrowserModule,
