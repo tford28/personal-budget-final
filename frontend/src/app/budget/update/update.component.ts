@@ -29,5 +29,4 @@ export class UpdateComponent implements OnInit {
     console.log(JSON.stringify(budget));
     this.router.navigate(['/viewbudget']);
   }
-
 }
