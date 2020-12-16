@@ -8,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+  user: any;
 
   ngOnInit(): void {
+  }
+
+  logout() {
+    localStorage.removeItem('JWT_Token');
   }
 }

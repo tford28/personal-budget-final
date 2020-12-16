@@ -35,5 +35,4 @@ export class RegisterComponent implements OnInit {
     alert('Budgets Added!');
     this.router.navigate(['/viewbudget']);
   }
-
 }
