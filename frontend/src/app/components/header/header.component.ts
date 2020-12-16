@@ -9,11 +9,12 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
   user: any;
-
+  
   ngOnInit(): void {
+    //this.user = localStorage.getItem('JWT_Token');
   }
 
-  logout() {
+  logout(){
     localStorage.removeItem('JWT_Token');
   }
 }
