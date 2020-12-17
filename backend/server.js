@@ -13,12 +13,8 @@ app.use(bodyParser.json());
 
 mongoose
 .connect(dbName)
-.then(() => {
-    console.log("Connected to Database");
-})
-.catch(() => {
-    console.log(err);
-});
+.then(() => console.log("Connected to Database"))
+.catch(() => console.log(err));
 
 app.get("/", (req,res) => {
     res.send("This is from rest API");
@@ -29,5 +25,5 @@ app.use("/budget", budget);
 
 const port = 3000;
 app.listen(port, () => {
-    console.log(`API served at http://localhost:${port}`);
+    console.log(`API served at ${port}`);
 });
