@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Users } from './../../model/users';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
+import { ComponentFixture } from '@angular/core/testing';
 
 @Component({
   selector: 'app-signup',
