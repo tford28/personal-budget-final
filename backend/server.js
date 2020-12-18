@@ -8,12 +8,6 @@ const budget = require("./routes/budget_db");
 const cors = require("cors");
 const app = express();
 
-app.use((req,res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://206.189.228.159");
-    res.setHeader("Access-Control-Allow-Headers", "Content-type, Authorization");
-    next();
-});
-
 app.use(cors());
 app.use(bodyParser.json());
 
