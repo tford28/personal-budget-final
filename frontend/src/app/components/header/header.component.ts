@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /*logout(){
+  logout(){
     localStorage.removeItem('JWT_Token');
-  } */
+  }
 }
