@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Users } from '../model/users';
 import jwt_decode from 'jwt-decode';
 
-const api = 'http://206.189.228.159/';
+const api = 'http://localhost:3000/users/';
 
 Injectable({
   providedIn: 'root'
