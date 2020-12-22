@@ -16,10 +16,6 @@ export class UserService {
     return this.httpClient.get<Users[]>(api + 'allUsers');
   }
 
-  registerUser(user: Users): Observable<Users>{
-    return this.httpClient.post<Users>(api + 'register', user);
-  }
-
   addUser(user: Users): Observable<Users>{
     return this.httpClient.post<Users>(api + 'addUser', user);
   }
